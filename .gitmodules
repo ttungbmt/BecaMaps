@@ -2,3 +2,7 @@
 [submodule "osm-geoserver"]
 	path = osm-geoserver
 	url = https://github.com/ttungbmt/osm-geoserver.git
+[submodule "react-app"]
+	path = react-app
+	url = https://github.com/ttungbmt/fuse-react.git
+	branch = my-skeleton
