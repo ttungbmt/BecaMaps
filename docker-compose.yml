@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+### Geoserver ##################################
+    osm-geoserver:
+      build:
+        context: ./osm-geoserver
+      environment:
+        - GEOSERVER_ADMIN_USER=${GEOSERVER_ADMIN_USER}
+        - GEOSERVER_ADMIN_PASSWORD=${GEOSERVER_ADMIN_PASSWORD}
+        - STABLE_EXTENSIONS=${STABLE_EXTENSIONS}
+        - MAXIMUM_MEMORY=10G
+        - XFRAME_OPTIONS="false"
+        - POSTGRES_ENDPOINT=${POSTGRES_ENDPOINT}
+        - POSTGRES_PORT=${POSTGRES_PORT}
+        - POSTGRES_USER=${POSTGRES_USER}
+        - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+        - OSM_SCHEMA=${OSM_SCHEMA}
+        - OSM_DB=${OSM_DB}
+      volumes:
+        - ./osm-geoserver:/opt/geoserver/data_dir
+      ports:
+        - 8600:8080
