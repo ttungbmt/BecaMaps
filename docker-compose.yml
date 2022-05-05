@@ -6,6 +6,8 @@ services:
       build:
         context: ./osm-geoserver
       environment:
+        - TOMCAT_USER=${TOMCAT_USER}
+        - TOMCAT_PASS=${TOMCAT_PASS}
         - GEOSERVER_ADMIN_USER=${GEOSERVER_ADMIN_USER}
         - GEOSERVER_ADMIN_PASSWORD=${GEOSERVER_ADMIN_PASSWORD}
         - STABLE_EXTENSIONS=${STABLE_EXTENSIONS}
