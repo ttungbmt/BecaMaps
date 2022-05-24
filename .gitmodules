@@ -1,4 +1,3 @@
-
 [submodule "osm-geoserver"]
 	path = osm-geoserver
 	url = https://github.com/ttungbmt/osm-geoserver.git
